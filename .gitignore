@@ -41,3 +41,4 @@ cron.txt
 book3/translation/book-tl/x.pdf
 tests/vendor
 whisper-batch.log
+.codebase-memory/
