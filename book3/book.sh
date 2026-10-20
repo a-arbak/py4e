@@ -3,6 +3,12 @@
 # To render Chinese text, touch the file
 #    touch .chinese
 # in this folder so as to run the LaTex to make Chinese output
+#
+# To render Turkish text, touch the file
+#    touch .turkish
+# in this folder: all text stays UTF-8 (no iconv transliteration), the
+# EPUB/Word title comes from epub-metadata.tr.txt and the PDF is built with
+# xelatex using Latin Modern (the English font).
 
 # Pick your Python
 MY_PYTHON=python
@@ -11,11 +17,26 @@ MY_PYTHON=python3
 fi
 echo Using python command: $MY_PYTHON
 
+# Title, author and language for the EPUB and Word files
+EPUB_META=epub-metadata.txt
+if [ -f .turkish ] ; then
+    EPUB_META=epub-metadata.tr.txt
+fi
+
+# Transliterate to ASCII, except for Turkish which must keep UTF-8
+translit() {
+    if [ -f .turkish ] ; then
+        cat
+    else
+        iconv -f utf8 -t ascii//TRANSLIT
+    fi
+}
+
 # For yucks make the epub
-cat epub-metadata.txt *.mkd | grep -v '^%' | $MY_PYTHON pre-html.py | $MY_PYTHON verbatim.py | iconv -f utf8 -t ascii//TRANSLIT | pandoc --default-image-extension=svg --css=epub.css -o x.epub
+cat $EPUB_META *.mkd | grep -v '^%' | $MY_PYTHON pre-html.py | $MY_PYTHON verbatim.py | translit | pandoc --default-image-extension=svg --css=epub.css -o x.epub
 
 # For yucks make the word
-cat epub-metadata.txt *.mkd | grep -v '^%' | $MY_PYTHON pre-html.py | $MY_PYTHON verbatim.py | iconv -f utf8 -t ascii//TRANSLIT | pandoc --default-image-extension=svg -t docx -o x.docx
+cat $EPUB_META *.mkd | grep -v '^%' | $MY_PYTHON pre-html.py | $MY_PYTHON verbatim.py | translit | pandoc --default-image-extension=svg -t docx -o x.docx
 
 rm tmp.* *.tmp *.aux
 pandoc A0-preface.mkd -o tmp.prefacex.tex
@@ -23,22 +44,34 @@ sed < tmp.prefacex.tex 's/section{/section*{/' > tmp.preface.tex
 # pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V fontfamily:arev -V fontsize:10pt -V documentclass:book --template=template.latex [0-9]*.mkd [A][A-Z]*.mkd -o tmp.tex
 if [ -f .chinese ] ; then
     # pandoc -o c.pdf --latex-engine=xelatex -V mainfont='Adobe Ming Std' 01-intro.mkd
-    cat [0-9]*.mkd | $MY_PYTHON verbatim.py | iconv -f utf8 -t ascii//TRANSLIT | tee tmp.verbatim | pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V fontsize:10pt -V documentclass:book -V mainfont='Noto Serif CJK SC' --template=template.latex -o tmp.tex
+    cat [0-9]*.mkd | $MY_PYTHON verbatim.py | translit | tee tmp.verbatim | pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V fontsize:10pt -V documentclass:book -V mainfont='Noto Serif CJK SC' --template=template.latex -o tmp.tex
     pandoc -V mainfont='Noto Serif CJK SC' [A-Z][A-Z]*.mkd -o tmp.app.tex
+elif [ -f .turkish ] ; then
+    cat [0-9]*.mkd | $MY_PYTHON verbatim.py > tmp.verbatim
+    # The template sets a Chinese line-break locale for xelatex; reset it.
+    # Newer pandoc (3.2+) emits \pandocbounded, which the template lacks.
+    # \nl is a line break for the title block (raw \\ is escaped by pandoc).
+    pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=eps -V fontsize:10pt -V documentclass:book -V lang=tr -V mainlang=turkish -V mainfont='Latin Modern Roman' -V header-includes='\XeTeXlinebreaklocale "en"' -V header-includes='\providecommand{\pandocbounded}[1]{#1}' -V header-includes='\newcommand{\nl}{\\}' --template=template.latex -o tmp.tex < tmp.verbatim
+    pandoc [A-Z][A-Z]*.mkd -o tmp.app.tex
 else
-    cat [0-9]*.mkd | $MY_PYTHON verbatim.py | iconv -f utf8 -t ascii//TRANSLIT > tmp.verbatim 
+    cat [0-9]*.mkd | $MY_PYTHON verbatim.py | translit > tmp.verbatim 
     pandoc -s -N -f markdown+definition_lists -t latex --toc --default-image-extension=jpg -V fontsize:10pt -V documentclass:book --template=template.latex -o tmp.tex < tmp.verbatim 
     pandoc [A-Z][A-Z]*.mkd -o tmp.app.tex
 fi
 
 sed < tmp.app.tex -e 's/subsubsection{/xyzzy{/' -e 's/subsection{/plugh{/' -e 's/section{/chapter{/' -e 's/xyzzy{/subsection{/' -e 's/plugh{/section{/'  > tmp.appendix.tex
 
-sed < tmp.tex '/includegraphics/s/jpg/eps/' | sed 's"includegraphics{../photos"includegraphics[height=3.0in]{../photos"' | iconv -f utf8 -t ascii//TRANSLIT > tmp.sed
+sed < tmp.tex '/includegraphics/s/jpg/eps/' | sed 's"includegraphics{../photos"includegraphics[height=3.0in]{../photos"' | translit > tmp.sed
 diff tmp.sed tmp.tex
-$MY_PYTHON texpatch.py < tmp.sed | iconv -f utf8 -t ascii//TRANSLIT > tmp.patch
+$MY_PYTHON texpatch.py < tmp.sed | translit > tmp.patch
 
 mv tmp.patch tmp.tex
 if [ -f .chinese ] ; then
+    xelatex tmp
+    makeindex tmp
+    xelatex tmp
+    mv tmp.pdf x.pdf
+elif [ -f .turkish ] ; then
     xelatex tmp
     makeindex tmp
     xelatex tmp
