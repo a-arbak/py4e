@@ -1,0 +1,36 @@
+{
+  "arch": [
+    {"en": "Input and / Output / Devices", "tr": ["Giriş ve", "Çıkış", "Birimleri"]},
+    {"en": "Software", "tr": ["Yazılım"]},
+    {"en": "Main / Memory", "tr": ["Ana", "Bellek"]},
+    {"en": "Central / Processing / Unit", "tr": ["Merkezi", "İşlem", "Birimi"]},
+    {"en": "What / Next?", "tr": ["Sırada", "ne var?"]},
+    {"en": "Network", "tr": ["Ağ"]},
+    {"en": "Secondary / Memory", "tr": ["İkincil", "Bellek"]}
+  ],
+  "pda": [
+    {"en": "What / Next?", "tr": ["Sırada", "ne var?"], "size": 13},
+    {"en": "What / Next?", "tr": ["Sırada", "ne var?"], "size": 13},
+    {"en": "What / Next?", "tr": ["Sırada", "ne var?"], "size": 13},
+    {"en": "What / Next?", "tr": ["Sırada", "ne var?"], "size": 13},
+    {"en": "What / Next?", "tr": ["Sırada", "ne var?"], "size": 13},
+    {"en": "What / Next?", "tr": ["Sırada", "ne var?"], "size": 13}
+  ],
+  "pda2": [
+    {"en": "Pick / Me!", "tr": ["Beni", "seç!"]},
+    {"en": "Pick / Me!", "tr": ["Beni", "seç!"]},
+    {"en": "Pick / Me!", "tr": ["Beni", "seç!"]},
+    {"en": "Pick / Me!", "tr": ["Beni", "seç!"]},
+    {"en": "Pick / Me!", "tr": ["Beni", "seç!"]},
+    {"en": "Buy / Me :)", "tr": ["Satın", "al :)"]}
+  ],
+  "arch2": [
+    {"en": "Input and / Output / Devices", "tr": ["Giriş ve", "Çıkış", "Birimleri"]},
+    {"en": "Software", "tr": ["Yazılım"]},
+    {"en": "Main / Memory", "tr": ["Ana", "Bellek"]},
+    {"en": "Central / Processing / Unit", "tr": ["Merkezi", "İşlem", "Birimi"]},
+    {"en": "What / Next?", "tr": ["Sırada", "ne var?"]},
+    {"en": "Network", "tr": ["Ağ"]},
+    {"en": "Secondary / Memory", "tr": ["İkincil", "Bellek"]}
+  ]
+}
