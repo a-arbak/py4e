@@ -1,45 +1,46 @@
-% Python for Everybody 
-% Exploring Data Using Python 3
-% Dr. Charles R. Severance
+% Herkes İçin Python
+% Python 3 ile Veri Keşfi
+% Dr. Charles R. Severance \nl[2em] Türkçe Baskı \nl Dr. Altay Arbak
 
-Why should you learn to write programs?
-=======================================
+Neden program yazmayı öğrenmelisiniz?
+=====================================
 
-Writing programs (or programming) is a very creative and rewarding
-activity. You can write programs for many reasons, ranging from making
-your living to solving a difficult data analysis problem to having fun
-to helping someone else solve a problem. This book assumes that
-*everyone* needs to know how to program, and that once you know how to
-program you will figure out what you want to do with your newfound
-skills.
+Program yazmak ya da programlama (programming), son derece yaratıcı ve
+insana doyum veren bir etkinliktir. Program yazmak için pek çok nedeniniz
+olabilir: geçiminizi sağlamaktan zorlu bir veri analizi problemini
+çözmeye, eğlenmekten başka birinin bir problemini çözmesine yardım etmeye
+kadar. Bu kitap, *herkesin* programlamayı bilmesi gerektiğini ve
+programlamayı öğrendiğinizde yeni edindiğiniz becerilerle ne yapmak
+istediğinizi kendiniz keşfedeceğinizi varsayıyor.
 
-We are surrounded in our daily lives with computers ranging from laptops
-to cell phones. We can think of these computers as our "personal
-assistants" who can take care of many things on our behalf. The hardware
-in our current-day computers is essentially built to continuously ask us
-the question, "What would you like me to do next?"
+Günlük hayatımızda dizüstü bilgisayarlardan cep telefonlarına kadar pek
+çok bilgisayarla çevriliyiz. Bu bilgisayarları, bizim adımıza pek çok işi
+halledebilen "kişisel asistanlarımız" olarak düşünebiliriz. Günümüz
+bilgisayarlarındaki donanım (hardware), temelde bize sürekli olarak şu
+soruyu soracak şekilde tasarlanmıştır: "Şimdi ne yapmamı istersiniz?"
 
-![Personal Digital Assistant](height=1.0in@../images/pda)
+![Kişisel Dijital Asistan](height=1.0in@../images/pda)
 
-Programmers add an operating system and a set of applications to the
-hardware and we end up with a Personal Digital Assistant that is quite
-helpful and capable of helping us do many different things.
+Programcılar donanımın üzerine bir işletim sistemi (operating system) ve
+bir dizi uygulama ekler; sonuçta da pek çok farklı işi yapmamıza yardım
+edebilen, oldukça kullanışlı ve becerikli bir Kişisel Dijital Asistan
+elde ederiz.
 
-Our computers are fast and have vast amounts of memory and could be very
-helpful to us if we only knew the language to speak to explain to the
-computer what we would like it to "do next". If we knew this language,
-we could tell the computer to do tasks on our behalf that were
-repetitive. Interestingly, the kinds of things computers can do best are
-often the kinds of things that we humans find boring and mind-numbing.
+Bilgisayarlarımız hızlıdır ve muazzam miktarda belleğe sahiptir;
+bilgisayara ondan "sırada ne yapmasını" istediğimizi anlatacak dili bir
+bilsek, bize çok yardımcı olabilirler. Bu dili bilseydik, tekrar
+gerektiren işleri bizim yerimize yapmasını bilgisayara söyleyebilirdik.
+İşin ilginç yanı, bilgisayarların en iyi yaptığı işler çoğu zaman biz
+insanların sıkıcı ve beyin uyuşturucu bulduğu türden işlerdir.
 
-For example, look at the first three paragraphs of this chapter and tell
-me the most commonly used word and how many times the word is used.
-While you were able to read and understand the words in a few seconds,
-counting them is almost painful because it is not the kind of problem
-that human minds are designed to solve. For a computer, the opposite is
-true, reading and understanding text from a piece of paper is hard for a
-computer to do but counting the words and telling you how many times the
-most used word was used is very easy for the computer:
+Örneğin, bu bölümün ilk üç paragrafına bakın ve bana en sık kullanılan
+kelimeyi ve bu kelimenin kaç kez kullanıldığını söyleyin. Kelimeleri
+birkaç saniye içinde okuyup anlayabilmiş olsanız da onları saymak
+neredeyse eziyettir, çünkü bu, insan zihninin çözmek için tasarlandığı
+türden bir problem değildir. Bilgisayar için durum tam tersidir: Bir
+kâğıttaki metni okuyup anlamak bilgisayar için zordur, ama kelimeleri
+sayıp en çok kullanılan kelimenin kaç kez kullanıldığını size söylemek
+bilgisayar için çok kolaydır:
 
 ~~~~ {.python}
 python words.py
@@ -47,181 +48,185 @@ Enter file: words.txt
 to 16
 ~~~~
 
-Our "personal information analysis assistant" quickly told us that the
-word "to" was used sixteen times in the first three paragraphs of this
-chapter.
+"Kişisel bilgi analizi asistanımız", bu bölümün ilk üç paragrafında "to"
+kelimesinin on altı kez kullanıldığını hemen söyledi. (Ç.N.: Sayım,
+bölümün İngilizce aslındaki ilk üç paragraf üzerinden yapılmıştır.)
 
-This very fact that computers are good at things that humans are not is
-why you need to become skilled at talking "computer language". Once you
-learn this new language, you can delegate mundane tasks to your partner
-(the computer), leaving more time for you to do the things that you are
-uniquely suited for. You bring creativity, intuition, and inventiveness
-to this partnership.
+İşte bilgisayarların, insanların iyi olmadığı işlerde iyi olması,
+"bilgisayar dili" konuşmakta ustalaşmanız gerekmesinin asıl nedenidir.
+Bu yeni dili öğrendiğinizde, sıradan ve sıkıcı işleri ortağınıza
+(bilgisayara) devredebilir, size özgü yeteneklerinizle yapabileceğiniz
+işlere daha çok zaman ayırabilirsiniz. Bu ortaklığa yaratıcılığı,
+sezgiyi ve yenilikçiliği siz getirirsiniz.
 
-Creativity and motivation
+Yaratıcılık ve motivasyon
 -------------------------
 
-While this book is not intended for professional programmers,
-professional programming can be a very rewarding job both financially
-and personally. Building useful, elegant, and clever programs for others
-to use is a very creative activity. Your computer or Personal Digital
-Assistant (PDA) usually contains many different programs from many
-different groups of programmers, each competing for your attention and
-interest. They try their best to meet your needs and give you a great
-user experience in the process. In some situations, when you choose a
-piece of software, the programmers are directly compensated because of
-your choice.
+Bu kitap profesyonel programcılar için yazılmamış olsa da profesyonel
+programcılık hem maddi hem de manevi açıdan son derece tatmin edici bir
+meslek olabilir. Başkalarının kullanacağı faydalı, zarif ve akıllıca
+programlar yapmak çok yaratıcı bir etkinliktir. Bilgisayarınızda ya da
+Kişisel Dijital Asistanınızda (PDA) genellikle farklı programcı
+gruplarının yazdığı pek çok program bulunur ve bunların her biri
+dikkatinizi ve ilginizi çekmek için yarışır. Programcılar
+ihtiyaçlarınızı karşılamak ve bu arada size harika bir kullanıcı
+deneyimi sunmak için ellerinden geleni yaparlar. Bazı durumlarda, bir
+yazılımı (software) seçtiğinizde programcılar sırf bu seçiminiz
+sayesinde doğrudan para kazanır.
 
-If we think of programs as the creative output of groups of programmers,
-perhaps the following figure is a more sensible version of our PDA:
+Programları, programcı gruplarının yaratıcı ürünleri olarak
+düşünürsek, belki de aşağıdaki şekil Kişisel Dijital
+Asistanımızı daha doğru anlatıyordur:
 
-![Programmers Talking to You](height=1.0in@../images/pda2)
+![Size Seslenen Programcılar](height=1.0in@../images/pda2)
 
-For now, our primary motivation is not to make money or please end
-users, but instead for us to be more productive in handling the data and
-information that we will encounter in our lives. When you first start,
-you will be both the programmer and the end user of your programs. As
-you gain skill as a programmer and programming feels more creative to
-you, your thoughts may turn toward developing programs for others.
+Şimdilik asıl motivasyonumuz para kazanmak ya da son kullanıcıları
+(end users) memnun etmek değil; hayatımızda karşılaşacağımız veri ve
+bilgilerle uğraşırken daha verimli olmak. İlk başladığınızda,
+yazdığınız programların hem programcısı hem de son kullanıcısı siz
+olacaksınız. Programcı olarak beceri kazandıkça ve programlama size
+daha yaratıcı gelmeye başladıkça, aklınız başkaları için program
+geliştirmeye kayabilir.
 
-Computer hardware architecture
-------------------------------
+Bilgisayar donanım mimarisi
+---------------------------
 
-\index{hardware}
-\index{hardware!architecture}
+\index{donanım}
+\index{donanım!mimari}
 
-Before we start learning the language we speak to give instructions to
-computers to develop software, we need to learn a small amount about how
-computers are built. If you were to take apart your computer or cell
-phone and look deep inside, you would find the following parts:
+Yazılım geliştirmek için bilgisayarlara talimat verirken kullanacağımız
+dili öğrenmeye başlamadan önce, bilgisayarların nasıl yapıldığını biraz
+öğrenmemiz gerekiyor. Bilgisayarınızı ya da cep telefonunuzu söküp
+içine derinlemesine bakacak olsaydınız, şu parçaları bulurdunuz:
 
-![Hardware Architecture](height=1.75in@../images/arch)
+![Donanım Mimarisi](height=1.75in@../images/arch)
 
-The high-level definitions of these parts are as follows:
+Bu parçaların genel tanımları şöyledir:
 
--   The *Central Processing Unit* (or CPU) is the part of
-    the computer that is built to be obsessed with "what is next?" If
-    your computer is rated at 3.0 Gigahertz, it means that the CPU will
-    ask "What next?" three billion times per second. You are going to
-    have to learn how to talk fast to keep up with the CPU.
+-   *Merkezi İşlem Birimi* (Central Processing Unit ya da kısaca CPU),
+    bilgisayarın "sırada ne var?" sorusuyla yatıp kalkacak şekilde
+    yapılmış parçasıdır. Bilgisayarınızın hızı 3,0 gigahertz ise, CPU
+    saniyede üç milyar kez "Sırada ne var?" diye soruyor demektir.
+    CPU'ya yetişebilmek için çok hızlı konuşmayı öğrenmeniz gerekecek.
 
--   The *Main Memory* is used to store information that
-    the CPU needs in a hurry. The main memory is nearly as fast as the
-    CPU. But the information stored in the main memory vanishes when the
-    computer is turned off.
+-   *Ana bellek* (main memory), CPU'nun acilen ihtiyaç duyduğu
+    bilgileri saklamak için kullanılır. Ana bellek neredeyse CPU kadar
+    hızlıdır. Ama ana bellekte saklanan bilgiler, bilgisayar
+    kapatıldığında yok olur.
 
--   The *Secondary Memory* is also used to store
-    information, but it is much slower than the main memory. The
-    advantage of the secondary memory is that it can store information
-    even when there is no power to the computer. Examples of secondary
-    memory are disk drives or flash memory (typically found in USB
-    sticks and portable music players).
+-   *İkincil bellek* (secondary memory) de bilgi saklamak için
+    kullanılır, ama ana bellekten çok daha yavaştır. İkincil belleğin
+    avantajı, bilgisayara elektrik gelmediğinde bile bilgiyi
+    saklayabilmesidir. Disk sürücüleri ya da flaş bellekler (genellikle
+    USB belleklerde ve taşınabilir müzik çalarlarda bulunur) ikincil
+    bellek örnekleridir.
 
--   The *Input and Output Devices* are simply our screen,
-    keyboard, mouse, microphone, speaker, touchpad, etc. They are all of
-    the ways we interact with the computer.
+-   *Giriş ve çıkış birimleri* (input and output devices) basitçe
+    ekranımız, klavyemiz, faremiz, mikrofonumuz, hoparlörümüz, dokunmatik
+    yüzeyimiz gibi parçalardır. Bilgisayarla etkileşim kurmanın bütün
+    yolları bunlardır.
 
--   These days, most computers also have a *Network
-    Connection* to retrieve information over a network. We can
-    think of the network as a very slow place to store and retrieve data
-    that might not always be "up". So in a sense, the network is a
-    slower and at times unreliable form of *Secondary
-    Memory*.
+-   Günümüzde çoğu bilgisayarda, bir ağ üzerinden bilgi almak için bir
+    de *ağ bağlantısı* (network connection) bulunur. Ağı, her zaman
+    "ayakta" olmayabilen ve veri saklayıp geri almak için kullanılan çok
+    yavaş bir yer olarak düşünebiliriz. Yani bir bakıma ağ, *ikincil
+    belleğin* daha yavaş ve zaman zaman güvenilmez bir biçimidir.
 
-While most of the detail of how these components work is best left to
-computer builders, it helps to have some terminology so we can talk
-about these different parts as we write our programs.
+Bu bileşenlerin nasıl çalıştığına dair ayrıntıların çoğunu bilgisayar
+üreticilerine bırakmak en iyisi olsa da, program yazarken bu farklı
+parçalardan söz edebilmek için biraz terminoloji bilmek işimize yarar.
 
-As a programmer, your job is to use and orchestrate each of these
-resources to solve the problem that you need to solve and analyze the
-data you get from the solution. As a programmer you will mostly be
-"talking" to the CPU and telling it what to do next. Sometimes you will
-tell the CPU to use the main memory, secondary memory, network, or the
-input/output devices.
+Bir programcı olarak işiniz, çözmeniz gereken problemi çözmek ve bu
+çözümden elde ettiğiniz verileri analiz etmek için bu kaynakların her
+birini kullanmak ve bir orkestra şefi gibi yönetmektir. Programcı
+olarak çoğunlukla CPU ile "konuşacak" ve ona sırada ne yapacağını
+söyleyeceksiniz. Bazen de CPU'ya ana belleği, ikincil belleği, ağı ya da
+giriş/çıkış birimlerini kullanmasını söyleyeceksiniz.
 
-![Where Are You?](height=1.75in@../images/arch2)
+![Siz Neredesiniz?](height=1.75in@../images/arch2)
 
-You need to be the person who answers the CPU's "What next?" question.
-But it would be very uncomfortable to shrink you down to 5mm tall and
-insert you into the computer just so you could issue a command three
-billion times per second. So instead, you must write down your
-instructions in advance. We call these stored instructions a
-*program* and the act of writing these instructions down
-and getting the instructions to be correct *programming*.
+CPU'nun "Sırada ne var?" sorusunu yanıtlayan kişi siz olmalısınız. Ama
+sırf saniyede üç milyar kez komut verebilesiniz diye sizi 5 mm boyuna
+küçültüp bilgisayarın içine yerleştirmek hiç de rahat olmazdı. Bu
+yüzden talimatlarınızı önceden yazmanız gerekir. Saklanan bu
+talimatlara *program*, bu talimatları yazma ve doğru hâle getirme işine
+de *programlama* diyoruz.
 
-Understanding programming
--------------------------
+Programlamayı anlamak
+---------------------
 
-In the rest of this book, we will try to turn you into a person who is
-skilled in the art of programming. In the end you will be a
-*programmer* - perhaps not a professional programmer, but
-at least you will have the skills to look at a data/information analysis
-problem and develop a program to solve the problem.
+Kitabın geri kalanında sizi programlama sanatında ustalaşmış biri hâline
+getirmeye çalışacağız. Sonunda bir *programcı* olacaksınız; belki
+profesyonel bir programcı değil, ama en azından bir veri/bilgi analizi
+problemine bakıp o problemi çözecek bir program geliştirme becerisine
+sahip olacaksınız.
 
-\index{problem solving}
+\index{problem çözme}
 
-In a sense, you need two skills to be a programmer:
+Bir bakıma, programcı olmak için iki beceriye ihtiyacınız var:
 
--   First, you need to know the programming language (Python) - you need
-    to know the vocabulary and the grammar. You need to be able to spell
-    the words in this new language properly and know how to construct
-    well-formed "sentences" in this new language.
+-   Birincisi, programlama dilini (Python) bilmeniz gerekir; yani
+    kelime dağarcığını ve dilbilgisini bilmelisiniz. Bu yeni dildeki
+    kelimeleri doğru yazabilmeli ve bu dilde kurallara uygun "cümleler"
+    kurmayı bilmelisiniz.
 
--   Second, you need to "tell a story". In writing a story, you combine
-    words and sentences to convey an idea to the reader. There is a
-    skill and art in constructing the story, and skill in story writing
-    is improved by doing some writing and getting some feedback. In
-    programming, our program is the "story" and the problem you are
-    trying to solve is the "idea".
+-   İkincisi, "bir hikâye anlatmanız" gerekir. Hikâye yazarken,
+    okura bir fikri aktarmak için kelimeleri ve cümleleri bir araya
+    getirirsiniz. Hikâye kurmanın bir becerisi ve sanatı vardır; hikâye
+    yazma becerisi de yazdıkça ve geri bildirim aldıkça gelişir.
+    Programlamada programımız "hikâye", çözmeye çalıştığınız problem ise
+    "fikir"dir.
 
-Once you learn one programming language such as Python, you will find it
-much easier to learn a second programming language such as JavaScript or
-C++. The new programming language has very different vocabulary and
-grammar but the problem-solving skills will be the same across all
-programming languages.
+Python gibi bir programlama dilini öğrendikten sonra, JavaScript ya da
+C++ gibi ikinci bir programlama dilini öğrenmenin çok daha kolay
+olduğunu göreceksiniz. Yeni programlama dilinin kelime dağarcığı ve
+dilbilgisi çok farklıdır, ama problem çözme becerileri bütün programlama
+dillerinde aynıdır.
 
-You will learn the "vocabulary" and "sentences" of Python pretty
-quickly. It will take longer for you to be able to write a coherent
-program to solve a brand-new problem. We teach programming much like we
-teach writing. We start reading and explaining programs, then we write
-simple programs, and then we write increasingly complex programs over
-time. At some point you "get your muse" and see the patterns on your own
-and can see more naturally how to take a problem and write a program
-that solves that problem. And once you get to that point, programming
-becomes a very pleasant and creative process.
+Python'un "kelimelerini" ve "cümlelerini" oldukça çabuk öğreneceksiniz.
+Yepyeni bir problemi çözecek tutarlı bir program yazabilmeniz ise daha
+uzun sürecek. Programlamayı, yazı yazmayı öğrettiğimiz gibi öğretiyoruz.
+Önce programları okuyup açıklayarak başlıyoruz, sonra basit programlar
+yazıyoruz, zamanla da giderek daha karmaşık programlar yazıyoruz. Bir
+noktada "ilham perileriniz gelir", kalıpları kendi başınıza görmeye
+başlarsınız ve bir problemi ele alıp onu çözen bir programı nasıl
+yazacağınızı daha doğal bir şekilde görürsünüz. O noktaya geldiğinizde
+de programlama çok keyifli ve yaratıcı bir sürece dönüşür.
 
-We start with the vocabulary and structure of Python programs. Be
-patient as the simple examples remind you of when you started reading
-for the first time.
+Python programlarının kelime dağarcığı ve yapısıyla başlıyoruz. Basit
+örnekler size okumayı ilk öğrendiğiniz günleri hatırlatacak; sabırlı
+olun.
 
-Words and sentences
--------------------
+Kelimeler ve cümleler
+---------------------
 
-\index{programming language}
-\index{reserved words}
-\index{language!programming}
-\index{keywords}
+\index{programlama dili}
+\index{ayrılmış kelime}
+\index{dil!programlama}
+\index{anahtar kelime}
 
-Unlike human languages, the Python vocabulary is actually pretty small.
-We call this "vocabulary" the "reserved words" or "keywords". These are words that
-have very special meaning to Python. When Python sees these words in a
-Python program, they have one and only one meaning to Python. Later as
-you write programs you will make up your own words that have meaning to
-you called *variables*. You will have great latitude in
-choosing your names for your variables, but you cannot use any of
-Python's reserved words as a name for a variable.
+İnsan dillerinin aksine, Python'un kelime dağarcığı aslında oldukça
+küçüktür. Bu "kelime dağarcığına" "ayrılmış kelimeler" (reserved words)
+ya da "anahtar kelimeler" (keywords) diyoruz. Bunlar Python için çok
+özel anlamı olan kelimelerdir. Python bu kelimeleri bir Python
+programında gördüğünde, bu kelimelerin Python için tek bir anlamı
+vardır, başka hiçbir anlamı yoktur. İlerleyen bölümlerde program
+yazarken, sizin için anlamı olan kendi kelimelerinizi de
+uyduracaksınız; bunlara *değişken* (variable) denir. Değişkenlerinize
+ad seçerken oldukça serbest olacaksınız, ama Python'un ayrılmış
+kelimelerinin hiçbirini değişken adı olarak kullanamazsınız.
 
-When we train a dog, we use special words like "sit", "stay", and
-"fetch". When you talk to a dog and don't use any of the reserved words,
-they just look at you with a quizzical look on their face until you say
-a reserved word. For example, if you say, "I wish more people would walk
-to improve their overall health", what most dogs likely hear is, "blah
-blah blah *walk* blah blah blah blah." That is because
-"walk" is a reserved word in dog language. Many might suggest that the
-language between humans and cats has no reserved words^[<http://xkcd.com/231/>].
+Bir köpeği eğitirken "otur", "bekle" ve "getir" gibi özel kelimeler
+kullanırız. Bir köpekle konuşurken bu ayrılmış kelimelerden hiçbirini
+kullanmazsanız, siz bir ayrılmış kelime söyleyene kadar yüzünde
+şaşkın bir ifadeyle size bakar. Örneğin, "Keşke daha çok insan genel
+sağlığını iyileştirmek için yürüyüşe çıksa" derseniz, çoğu köpeğin
+muhtemelen duyduğu şey şudur: "bla bla bla *yürüyüş* bla bla bla bla."
+Bunun nedeni, "yürüyüş" kelimesinin köpek dilinde ayrılmış bir kelime
+olmasıdır. Pek çok kişi, insanlarla kediler arasındaki dilde hiç
+ayrılmış kelime olmadığını söyleyebilir^[<http://xkcd.com/231/>].
 
-The reserved words in the language where humans talk to Python include
-the following:
+İnsanların Python'la konuştuğu dildeki ayrılmış kelimeler şunlardır:
 
     False      await      else       import     pass
     None       break      except     in         raise
@@ -231,44 +236,46 @@ the following:
     assert     del        global     not        with
     async      elif       if         or         yield
 
-That is it, and unlike a dog, Python is already completely trained. When
-you say "try", Python will try every time you say it without fail.
+Hepsi bu kadar. Üstelik köpeğin aksine Python zaten tamamen eğitilmiş
+durumdadır. "try" (dene) dediğinizde, Python bunu her söyleyişinizde
+şaşmadan dener.
 
-We will learn these reserved words and how they are used in good time,
-but for now we will focus on the Python equivalent of "speak" (in
-human-to-dog language). The nice thing about telling Python to speak is
-that we can even tell it what to say by giving it a message in quotes:
+Bu ayrılmış kelimeleri ve nasıl kullanıldıklarını zamanı geldikçe
+öğreneceğiz, ama şimdilik (insan-köpek dilindeki) "konuş" komutunun
+Python'daki karşılığına odaklanacağız. Python'a konuşmasını söylemenin
+güzel yanı, tırnak içinde bir mesaj vererek ona ne söyleyeceğini bile
+söyleyebilmemizdir:
 
 ~~~~ {.python}
 print('Hello world!')
 ~~~~
 
-And we have even written our first syntactically correct Python
-sentence. Our sentence starts with the function *print* 
-followed by a string of text of our choosing enclosed in single quotes.
-The strings in the print statements are enclosed in quotes. Single
-quotes and double quotes do the same thing; most people use single
-quotes except in cases where a single quote (which is also an
-apostrophe) appears in the string.
+Böylece sözdizimi açısından doğru ilk Python cümlemizi de yazmış olduk.
+Cümlemiz *print* fonksiyonuyla (function) başlıyor, ardından da tek
+tırnak içine alınmış, bizim seçtiğimiz bir metin (string) geliyor. print
+deyimlerindeki (statement) metinler tırnak içine alınır. Tek tırnak ve
+çift tırnak aynı işi görür; çoğu kişi tek tırnak kullanır, ancak metnin
+içinde tek tırnak (aynı zamanda kesme işareti) geçiyorsa çift tırnağı
+tercih eder.
 
-Conversing with Python
-----------------------
+Python'la sohbet
+----------------
 
-Now that we have a word and a simple sentence that we know in Python, we
-need to know how to start a conversation with Python to test our new
-language skills.
+Artık Python'da bildiğimiz bir kelime ve basit bir cümle olduğuna göre,
+yeni dil becerilerimizi sınamak için Python'la nasıl sohbet
+başlatacağımızı bilmemiz gerekiyor.
 
-Before you can converse with Python, you must first install the Python
-software on your computer and learn how to start Python on your
-computer. That is too much detail for this chapter so I suggest that you
-consult [www.py4e.com](http://www.py4e.com) where I have detailed
-instructions and screencasts of setting up and starting Python on
-Macintosh and Windows systems. At some point, you will be in a terminal
-or command window and you will type *python* and the
-Python interpreter will start executing in interactive mode and appear
-somewhat as follows:
+Python'la sohbet edebilmek için önce Python yazılımını bilgisayarınıza
+kurmanız ve Python'ı bilgisayarınızda nasıl başlatacağınızı öğrenmeniz
+gerekir. Bu konu bu bölüm için fazla ayrıntılı; bu yüzden
+[www.py4e.com](http://www.py4e.com) adresine bakmanızı öneririm. Orada
+Python'ı Macintosh ve Windows sistemlerinde kurmak ve başlatmak için
+ayrıntılı talimatlar ve ekran kaydı videoları hazırladım. Bir noktada
+bir terminalde ya da komut penceresinde *python* yazacaksınız; Python
+yorumlayıcısı (interpreter) da etkileşimli modda (interactive mode)
+çalışmaya başlayacak ve aşağı yukarı şöyle görünecek:
 
-\index{interactive mode}
+\index{etkileşimli mod}
 
 ~~~~ {.python}
 Python 3.11.6 (main, Nov  2 2023, 04:39:43) 
@@ -278,15 +285,14 @@ information.
 >>>
 ~~~~
 
-The `>>>` prompt is the Python interpreter's way of asking
-you, "What do you want me to do next?" Python is ready to have a
-conversation with you. All you have to know is how to speak the Python
-language.
+`>>>` istemi (prompt), Python yorumlayıcısının size "Şimdi ne yapmamı
+istersiniz?" diye sorma biçimidir. Python sizinle sohbet etmeye hazır.
+Tek bilmeniz gereken, Python dilini nasıl konuşacağınızdır.
 
-Let's say for example that you did not know even the simplest Python
-language words or sentences. You might want to use the standard line
-that astronauts use when they land on a faraway planet and try to speak
-with the inhabitants of the planet:
+Diyelim ki en basit Python kelimelerini ya da cümlelerini bile
+bilmiyorsunuz. Uzak bir gezegene inen ve gezegenin sakinleriyle
+konuşmaya çalışan astronotların kullandığı o klasik cümleyi denemek
+isteyebilirsiniz:
 
 ~~~~ {.python}
 >>> I come in peace, please take me to your leader
@@ -297,19 +303,20 @@ SyntaxError: invalid syntax
 >>>
 ~~~~
 
-This is not going so well. Unless you think of something quickly, the
-inhabitants of the planet are likely to stab you with their spears, put
-you on a spit, roast you over a fire, and eat you for dinner.
+Bu pek iyi gitmedi. Hızlıca bir şey düşünmezseniz, gezegenin sakinleri
+muhtemelen sizi mızraklarıyla şişleyecek, bir şişe geçirecek, ateşte
+kızartacak ve akşam yemeğinde yiyecekler.
 
-Luckily you brought a copy of this book on your travels, and you thumb
-to this very page and try again:
+Neyse ki yolculuğa çıkarken bu kitabın bir kopyasını yanınıza
+almışsınız; hemen bu sayfayı açıp yeniden deniyorsunuz:
 
 ~~~~ {.python}
 >>> print('Hello world!')
 Hello world!
 ~~~~
 
-This is looking much better, so you try to communicate some more:
+Bu çok daha iyi görünüyor, siz de iletişimi biraz daha ilerletmeyi
+deniyorsunuz:
 
 ~~~~ {.python}
 >>> print('You must be the legendary god that comes from the sky')
@@ -326,26 +333,25 @@ SyntaxError: unterminated string literal (detected at line 1)
 >>>
 ~~~~
 
-The conversation was going so well for a while and then you made the
-tiniest mistake using the Python language and Python brought the spears
-back out.
+Sohbet bir süre çok iyi gidiyordu, sonra Python dilini kullanırken en
+ufak bir hata yaptınız ve Python mızrakları yeniden çıkardı.
 
-At this point, you should also realize that while Python is amazingly
-complex and powerful and very picky about the syntax you use to
-communicate with it, Python is *not* intelligent. You are
-really just having a conversation with yourself, but using proper
-syntax.
+Bu noktada şunu da fark etmelisiniz: Python inanılmaz derecede karmaşık
+ve güçlü olsa da, onunla iletişim kurarken kullandığınız sözdizimi
+(syntax) konusunda çok titiz olsa da, Python akıllı *değildir*. Aslında
+yalnızca kendinizle sohbet ediyorsunuz, sadece doğru sözdizimini
+kullanarak.
 
-In a sense, when you use a program written by someone else the
-conversation is between you and those other programmers with Python
-acting as an intermediary. Python is a way for the creators of programs
-to express how the conversation is supposed to proceed. And in just a
-few more chapters, you will be one of those programmers using Python to
-talk to the users of your program.
+Bir bakıma, başka birinin yazdığı bir programı kullandığınızda sohbet,
+sizinle o programcılar arasında geçer; Python da aracılık eder. Python,
+programları yazanların sohbetin nasıl ilerlemesi gerektiğini ifade
+etmelerinin bir yoludur. Yalnızca birkaç bölüm sonra, siz de Python'ı
+kullanarak programınızın kullanıcılarıyla konuşan o programcılardan
+biri olacaksınız.
 
-Before we leave our first conversation with the Python interpreter, you
-should probably know the proper way to say "good-bye" when interacting
-with the inhabitants of Planet Python:
+Python yorumlayıcısıyla ilk sohbetimizden ayrılmadan önce, Python
+Gezegeni'nin sakinleriyle konuşurken "hoşça kal" (good-bye) demenin
+doğru yolunu da bilseniz iyi olur:
 
 ~~~~ {.python}
 >>> good-bye
@@ -360,29 +366,43 @@ SyntaxError: unterminated string literal (detected at line 1)
 >>> quit()
 ~~~~
 
-You will notice that the error is different for the first two incorrect
-attempts. The second error is different because *if* is a
-reserved word and Python saw the reserved word and thought we were
-trying to say something but got the syntax of the sentence wrong.
+İlk iki yanlış denemede hatanın farklı olduğunu fark edeceksiniz. İkinci
+hata farklıdır, çünkü *if* ayrılmış bir kelimedir; Python bu ayrılmış
+kelimeyi gördü ve bir şey söylemeye çalıştığımızı, ama cümlenin
+sözdizimini yanlış kurduğumuzu düşündü.
 
-The proper way to say "good-bye" to Python is to enter
-*quit()* at the interactive chevron `>>>`
-prompt. It would have probably taken you quite a while to guess that
-one, so having a book handy probably will turn out to be helpful.
+Python'a "hoşça kal" demenin doğru yolu, etkileşimli `>>>` istemine
+*quit()* yazmaktır. Bunu tahmin etmeniz muhtemelen epey uzun sürerdi;
+bu yüzden elinizin altında bir kitap bulunması büyük ihtimalle işinize
+yarayacak.
 
-Terminology: Interpreter and compiler
+<!-- TR-EK-BASLA -->
+(Ç.N.: Bu bölümdeki örnek diyaloglar, kodun kendisi değiştirilmediği
+için İngilizce kalmıştır. Türkçe karşılıkları şöyledir: "I come in
+peace, please take me to your leader" → "Barış içinde geldik, lütfen
+bizi liderinize götürün"; "You must be the legendary god that comes
+from the sky" → "Gökten inen efsanevi tanrı siz olmalısınız"; "We have
+been waiting for you for a long time" → "Sizi uzun zamandır
+bekliyorduk"; "Our legend says you will be very tasty with mustard" →
+"Efsanemize göre hardalla çok lezzetli olacaksınız"; "We will have a
+feast tonight unless you say" → "Bu gece ziyafet çekeceğiz, tabii siz
+şunu demezseniz"; "if you don't mind, I need to leave" → "Sakıncası
+yoksa gitmem gerekiyor".)
+<!-- TR-EK-BITIS -->
+
+Terminoloji: Yorumlayıcı ve derleyici
 -------------------------------------
 
-Python is a *high-level* language intended to be
-relatively straightforward for humans to read and write and for
-computers to read and process. Other high-level languages include Java,
-C++, PHP, Ruby, Basic, Perl, JavaScript, and many more. The actual
-hardware inside the Central Processing Unit (CPU) does not understand
-any of these high-level languages.
+Python, insanların okuması ve yazması, bilgisayarların da okuması ve
+işlemesi görece kolay olacak şekilde tasarlanmış *yüksek seviyeli*
+(high-level) bir dildir. Diğer yüksek seviyeli diller arasında Java,
+C++, PHP, Ruby, Basic, Perl, JavaScript ve daha pek çoğu sayılabilir.
+Merkezi İşlem Biriminin (CPU) içindeki asıl donanım bu yüksek seviyeli
+dillerin hiçbirini anlamaz.
 
-The CPU understands a language we call *machine
-language*. Machine language is very simple and frankly very
-tiresome to write because it is represented all in zeros and ones:
+CPU, *makine dili* (machine language) dediğimiz bir dili anlar. Makine
+dili çok basittir ve açıkçası yazması çok yorucudur, çünkü tamamen
+sıfırlar ve birlerle ifade edilir:
 
 ~~~~
 001010001110100100101010000001111
@@ -390,36 +410,36 @@ tiresome to write because it is represented all in zeros and ones:
 ...
 ~~~~
 
-Machine language seems quite simple on the surface, given that there are
-only zeros and ones, but its syntax is even more complex and far more
-intricate than Python. So very few programmers ever write machine
-language. Instead we build various translators to allow programmers to
-write in high-level languages like Python or JavaScript and these
-translators convert the programs to machine language for actual
-execution by the CPU.
+Yalnızca sıfırlar ve birlerden oluştuğu için makine dili ilk bakışta
+oldukça basit görünür, ama sözdizimi Python'unkinden bile daha karmaşık
+ve çok daha girift yapıdadır. Bu yüzden makine dilinde program yazan
+programcı sayısı çok azdır. Bunun yerine, programcıların Python ya da
+JavaScript gibi yüksek seviyeli dillerde yazabilmesini sağlayan çeşitli
+çeviriciler (translator) geliştiririz; bu çeviriciler de programları,
+CPU'nun asıl yürütebilmesi için makine diline dönüştürür.
 
-Since machine language is tied to the computer hardware, machine
-language is not *portable* across different types of
-hardware. Programs written in high-level languages can be moved between
-different computers by using a different interpreter on the new machine
-or recompiling the code to create a machine language version of the
-program for the new machine.
+Makine dili bilgisayar donanımına bağlı olduğu için farklı donanım
+türleri arasında *taşınabilir* (portable) değildir. Yüksek seviyeli
+dillerde yazılmış programlar ise yeni makinede farklı bir yorumlayıcı
+kullanılarak ya da kod yeniden derlenerek programın yeni makineye uygun
+bir makine dili sürümü oluşturulduğunda farklı bilgisayarlara
+taşınabilir.
 
-These programming language translators fall into two general categories:
-(1) interpreters and (2) compilers.
+Bu programlama dili çeviricileri iki genel kategoriye ayrılır:
+(1) yorumlayıcılar ve (2) derleyiciler.
 
-An *interpreter* reads the source code of the program as
-written by the programmer, parses the source code, and interprets the
-instructions on the fly. Python is an interpreter and when we are
-running Python interactively, we can type a line of Python (a sentence)
-and Python processes it immediately and is ready for us to type another
-line of Python.
+Bir *yorumlayıcı*, programın programcı tarafından yazılan kaynak
+kodunu (source code) okur, kaynak kodu ayrıştırır (parse) ve talimatları
+anında yorumlar. Python bir yorumlayıcıdır; Python'ı etkileşimli olarak
+çalıştırdığımızda bir satır Python (bir cümle) yazabiliriz, Python da bu
+satırı hemen işler ve bir sonraki Python satırını yazmamız için hazır
+hâle gelir.
 
-Some of the lines of Python tell Python that you want it to remember
-some value for later. We need to pick a name for that value to be
-remembered and we can use that symbolic name to retrieve the value
-later. We use the term *variable* to refer to the labels
-we use to refer to this stored data.
+Bazı Python satırları, Python'a bir değeri (value) daha sonra kullanmak
+üzere hatırlamasını istediğinizi söyler. Hatırlanacak bu değer için bir
+ad seçmemiz gerekir; değeri daha sonra geri almak için de bu sembolik
+adı kullanabiliriz. Saklanan bu verilere erişmek için kullandığımız
+etiketleri *değişken* terimiyle adlandırırız.
 
 ~~~~ {.python}
 >>> x = 6
@@ -431,34 +451,35 @@ we use to refer to this stored data.
 >>>
 ~~~~
 
-In this example, we ask Python to remember the value six and use the
-label *x* so we can retrieve the value later. We verify
-that Python has actually remembered the value using
-*print*. Then we ask Python to retrieve
-*x* and multiply it by seven and put the newly computed
-value in *y*. Then we ask Python to print out the value
-currently in *y*.
+Bu örnekte Python'dan altı değerini hatırlamasını ve değeri daha sonra
+geri alabilmemiz için *x* etiketini kullanmasını istiyoruz. Python'un
+değeri gerçekten hatırladığını *print* ile doğruluyoruz. Sonra Python'dan
+*x*'i alıp yediyle çarpmasını ve yeni hesaplanan değeri *y*'ye
+koymasını istiyoruz. Ardından Python'dan *y*'de o anda bulunan değeri
+yazdırmasını istiyoruz.
 
-Even though we are typing these commands into Python one line at a time,
-Python is treating them as an ordered sequence of statements with later
-statements able to retrieve data created in earlier statements. We are
-writing our first simple paragraph with four sentences in a logical and
-meaningful order.
+Bu komutları Python'a birer satır hâlinde yazıyor olsak da, Python
+bunları sıralı bir deyimler dizisi olarak ele alır; sonraki deyimler
+önceki deyimlerde oluşturulan verilere erişebilir. Böylece dört
+cümleden oluşan, mantıklı ve anlamlı bir sırayla dizilmiş ilk basit
+paragrafımızı yazmış oluyoruz.
 
-It is the nature of an *interpreter* to be able to have
-an interactive conversation as shown above. A *compiler*
-needs to be handed the entire program in a file, and then it runs a
-process to translate the high-level source code into machine language
-and then the compiler puts the resulting machine language into a file
-for later execution.
+Yukarıda gösterildiği gibi etkileşimli bir sohbet yürütebilmek,
+*yorumlayıcının* doğasında vardır. *Derleyiciye* (compiler) ise
+programın tamamını bir dosya içinde vermek gerekir; derleyici bu
+dosyayı alıp yüksek seviyeli kaynak kodu makine diline çeviren bir
+süreç çalıştırır, ardından elde edilen makine dilini daha sonra
+yürütülmek üzere bir dosyaya kaydeder.
 
-If you have a Windows system, often these executable machine language
-programs have a suffix of ".exe" or ".dll" which stand for "executable"
-and "dynamic link library" respectively. In Linux and Macintosh, there
-is no suffix that uniquely marks a file as executable.
+Windows sistemi kullanıyorsanız, bu çalıştırılabilir (executable)
+makine dili programlarının dosya uzantısı çoğunlukla ".exe" ya da
+".dll" olur; bunlar sırasıyla "executable" (çalıştırılabilir) ve
+"dynamic link library" (dinamik bağlantı kütüphanesi) anlamına gelir.
+Linux ve Macintosh'ta ise bir dosyayı tek başına çalıştırılabilir
+olarak işaretleyen bir uzantı yoktur.
 
-If you were to open an executable file in a text editor, it would look
-completely crazy and be unreadable:
+Çalıştırılabilir bir dosyayı bir metin düzenleyicide açacak olsaydınız,
+dosya tamamen çılgınca ve okunamaz görünürdü:
 
 ~~~~
 ^?ELF^A^A^A^@^@^@^@^@^@^@^@^@^B^@^C^@^A^@^@^@\xa0\x82
@@ -469,49 +490,49 @@ completely crazy and be unreadable:
 ....
 ~~~~
 
-It is not easy to read or write machine language, so it is nice that we
-have *interpreters* and *compilers* that
-allow us to write in high-level languages like Python or C.
+Makine dilini okumak ya da yazmak kolay değildir; bu yüzden Python ya
+da C gibi yüksek seviyeli dillerde yazmamızı sağlayan *yorumlayıcıların*
+ve *derleyicilerin* var olması güzel bir şey.
 
-Now at this point in our discussion of compilers and interpreters, you
-should be wondering a bit about the Python interpreter itself. What
-language is it written in? Is it written in a compiled language? When we
-type "python", what exactly is happening?
+Derleyiciler ve yorumlayıcılar hakkındaki tartışmamızın bu noktasında,
+Python yorumlayıcısının kendisini de biraz merak ediyor olmalısınız.
+Hangi dilde yazılmış? Derlenen bir dilde mi yazılmış? "python"
+yazdığımızda tam olarak ne oluyor?
 
-The Python interpreter is written in a high-level language called "C".
-You can look at the actual source code for the Python interpreter by
-going to [www.python.org](http://www.python.org) and working your way to their
-source code. So Python is a program itself and it is compiled into
-machine code. When you installed Python on your computer (or the vendor
-installed it), you copied a machine-code copy of the translated Python
-program onto your system. In Windows, the executable machine code for
-Python itself is likely in a file with a name like:
+Python yorumlayıcısı "C" adlı yüksek seviyeli bir dilde yazılmıştır.
+Python yorumlayıcısının asıl kaynak koduna,
+[www.python.org](http://www.python.org) adresine gidip kaynak kodun
+bulunduğu yere ulaşarak bakabilirsiniz. Yani Python'un kendisi de bir
+programdır ve makine koduna (machine code) derlenmiştir. Python'ı
+bilgisayarınıza kurduğunuzda (ya da üretici kurduğunda), çevrilmiş
+Python programının makine kodu hâlindeki bir kopyasını sisteminize
+kopyalamış oldunuz. Windows'ta Python'un kendisine ait çalıştırılabilir
+makine kodu büyük ihtimalle şuna benzer bir adı olan bir dosyadadır:
 
 ~~~~
 C:\Python35\python.exe
 ~~~~
 
-That is more than you really need to know to be a Python programmer, but
-sometimes it pays to answer those little nagging questions right at the
-beginning.
+Bu, bir Python programcısı olmak için gerçekten bilmeniz gerekenden
+fazlası; ama bazen insanın aklını kurcalayan bu küçük soruları daha en
+başta yanıtlamak iyidir.
 
-Writing a program
------------------
+Program yazmak
+--------------
 
-Typing commands into the Python interpreter is a great way to experiment
-with Python's features, but it is not recommended for solving more
-complex problems.
+Python yorumlayıcısına komutlar yazmak, Python'un özelliklerini denemek
+için harika bir yoldur, ama daha karmaşık problemleri çözmek için
+önerilmez.
 
-When we want to write a program, we use a text editor to write the
-Python instructions into a file, which is called a
-*script*. By convention, Python scripts have names that
-end with `.py`.
+Bir program yazmak istediğimizde, Python talimatlarını bir metin
+düzenleyiciyle bir dosyaya yazarız; bu dosyaya *betik* (script) denir.
+Geleneksel olarak Python betiklerinin adları `.py` ile biter.
 
-\index{script}
+\index{betik}
 
-To execute the script, you have to tell the Python interpreter the name
-of the file. In a command window, you would type
-`python hello.py` as follows:
+Betiği çalıştırmak için Python yorumlayıcısına dosyanın adını söylemeniz
+gerekir. Bir komut penceresinde aşağıdaki gibi `python hello.py`
+yazarsınız:
 
 ~~~~ {.bash}
 $ cat hello.py
@@ -520,142 +541,142 @@ $ python hello.py
 Hello world!
 ~~~~
 
-The "\$" is the operating system prompt, and the "cat hello.py" is
-showing us that the file "hello.py" has a one-line Python program to
-print a string.
+"\$" işletim sisteminin istemidir; "cat hello.py" ise bize "hello.py"
+dosyasında bir metni ekrana yazdıran tek satırlık bir Python programı
+olduğunu gösteriyor.
 
-We call the Python interpreter and tell it to read its source code from
-the file "hello.py" instead of prompting us for lines of Python code
-interactively.
+Python yorumlayıcısını çağırıyor ve bizden Python kodu satırlarını
+etkileşimli olarak istemek yerine, kaynak kodunu "hello.py" dosyasından
+okumasını söylüyoruz.
 
-You will notice that there was no need to have *quit()*
-at the end of the Python program in the file. When Python is reading
-your source code from a file, it knows to stop when it reaches the end
-of the file.
+Dosyadaki Python programının sonuna *quit()* koymaya gerek olmadığını
+fark edeceksiniz. Python kaynak kodunuzu bir dosyadan okurken, dosyanın
+sonuna geldiğinde durması gerektiğini bilir.
 
-What is a program?
-------------------
+Program nedir?
+--------------
 
-The definition of a *program* at its most basic is a
-sequence of Python statements that have been crafted to do something.
-Even our simple *hello.py* script is a program. It is a
-one-line program and is not particularly useful, but in the strictest
-definition, it is a Python program.
+En temel tanımıyla bir *program*, bir iş yapmak üzere özenle
+hazırlanmış bir Python deyimleri dizisidir. Basit *hello.py* betiğimiz
+bile bir programdır. Tek satırlık bir programdır ve pek bir işe yaramaz,
+ama tanımın en katı hâliyle bir Python programıdır.
 
-It might be easiest to understand what a program is by thinking about a
-problem that a program might be built to solve, and then looking at a
-program that would solve that problem.
+Programın ne olduğunu anlamanın en kolay yolu, bir programın çözmek için
+yazılabileceği bir problemi düşünüp ardından o problemi çözecek bir
+programa bakmak olabilir.
 
-Lets say you are doing Social Computing research on Facebook posts and
-you are interested in the most frequently used word in a series of
-posts. You could print out the stream of Facebook posts and pore over
-the text looking for the most common word, but that would take a long
-time and be very mistake prone. You would be smart to write a Python
-program to handle the task quickly and accurately so you can spend the
-weekend doing something fun.
+Diyelim ki Facebook gönderileri üzerine bir sosyal bilişim (Social
+Computing) araştırması yapıyorsunuz ve bir dizi gönderide en sık
+kullanılan kelimeyi merak ediyorsunuz. Facebook gönderilerinin akışını
+yazıcıdan çıkarıp en yaygın kelimeyi bulmak için metnin üzerinde saatlerce
+kafa yorabilirsiniz, ama bu çok uzun sürer ve hataya çok açıktır. Bu işi
+hızlı ve doğru bir şekilde halletmek için bir Python programı yazmak
+akıllıca olur; böylece hafta sonunu eğlenceli bir şeyler yaparak
+geçirebilirsiniz.
 
-For example, look at the following text about a clown and a car. Look at
-the text and figure out the most common word and how many times it
-occurs.
+Örneğin, bir palyaço ve bir araba hakkındaki aşağıdaki metne bakın.
+Metni inceleyin ve en yaygın kelimenin hangisi olduğunu ve kaç kez
+geçtiğini bulun.
 
 ~~~~
 the clown ran after the car and the car ran into the tent
 and the tent fell down on the clown and the car
 ~~~~
 
-Then imagine that you are doing this task looking at millions of lines
-of text. Frankly it would be quicker for you to learn Python and write a
-Python program to count the words than it would be to manually scan the
-words.
+Şimdi de bu işi milyonlarca satırlık metne bakarak yaptığınızı düşünün.
+Açıkçası, Python öğrenip kelimeleri sayan bir Python programı yazmanız,
+kelimeleri elle taramanızdan daha çabuk olurdu.
 
-The even better news is that I already came up with a simple program to
-find the most common word in a text file. I wrote it, tested it, and now
-I am giving it to you to use so you can save some time.
+Daha da iyi haber şu: Bir metin dosyasındaki en yaygın kelimeyi bulan
+basit bir programı ben zaten yazdım. Yazdım, test ettim ve şimdi biraz
+zaman kazanabilmeniz için kullanımınıza sunuyorum.
 
 \VerbatimInput{../code3/words.py}
 \begin{trinketfiles}
 ../code3/words.txt
 \end{trinketfiles}
 
-You don't even need to know Python to use this program. You will need to
-get through Chapter 10 of this book to fully understand the awesome
-Python techniques that were used to make the program. You are the end
-user, you simply use the program and marvel at its cleverness and how it
-saved you so much manual effort. You simply type the code into a file
-called *words.py* and run it or you download the source
-code from <http://www.py4e.com/code3/> and run it.
+Bu programı kullanmak için Python bilmenize bile gerek yok. Programı
+yazarken kullanılan harika Python tekniklerini tam olarak anlamak için
+bu kitabın 10. bölümüne kadar gelmeniz gerekecek. Siz son
+kullanıcısınız; programı kullanırsınız, ne kadar akıllıca yazıldığına ve
+sizi ne kadar çok elle yapılacak işten kurtardığına hayran kalırsınız.
+Tek yapmanız gereken, kodu *words.py* adlı bir dosyaya yazıp
+çalıştırmak ya da kaynak kodu <http://www.py4e.com/code3/> adresinden
+indirip çalıştırmaktır.
 
 \index{program}
 
-This is a good example of how Python and the Python language are acting
-as an intermediary between you (the end user) and me (the programmer).
-Python is a way for us to exchange useful instruction sequences (i.e.,
-programs) in a common language that can be used by anyone who installs
-Python on their computer. So neither of us are talking *to
-Python*, instead we are communicating with each other
-*through* Python.
+Bu, Python'un ve Python dilinin sizinle (son kullanıcı) benim
+(programcı) aramda nasıl bir aracı görevi gördüğünün güzel bir örneği.
+Python, bilgisayarına Python kuran herkesin kullanabileceği ortak bir
+dilde, işe yarar talimat dizilerini (yani programları) birbirimizle
+paylaşmamızın bir yoludur. Yani ikimiz de *Python'la* konuşmuyoruz;
+aslında Python *aracılığıyla* birbirimizle iletişim kuruyoruz.
 
-The building blocks of programs
--------------------------------
+Programların yapı taşları
+-------------------------
 
-In the next few chapters, we will learn more about the vocabulary,
-sentence structure, paragraph structure, and story structure of Python.
-We will learn about the powerful capabilities of Python and how to
-compose those capabilities together to create useful programs.
+Sonraki birkaç bölümde Python'un kelime dağarcığını, cümle yapısını,
+paragraf yapısını ve hikâye yapısını daha ayrıntılı öğreneceğiz.
+Python'un güçlü yeteneklerini ve işe yarar programlar oluşturmak için bu
+yetenekleri nasıl bir araya getireceğimizi öğreneceğiz.
 
-There are some low-level conceptual patterns that we use to construct
-programs. These constructs are not just for Python programs, they are
-part of every programming language from machine language up to the
-high-level languages.
+Program oluştururken kullandığımız bazı düşük seviyeli (low-level)
+kavramsal kalıplar vardır. Bu yapılar yalnızca Python programlarına özgü
+değildir; makine dilinden yüksek seviyeli dillere kadar her programlama
+dilinin bir parçasıdır.
 
-input
-:   Get data from the "outside world". This might be reading data from a
-    file, or even some kind of sensor like a microphone or GPS. In our
-    initial programs, our input will come from the user typing data on
-    the keyboard.
+giriş (input)
+:   "Dış dünyadan" veri almak. Bu, bir dosyadan veri okumak, hatta
+    mikrofon ya da GPS gibi bir tür algılayıcıdan veri almak olabilir.
+    İlk programlarımızda girişimiz, kullanıcının klavyeden yazdığı
+    verilerden gelecek.
 
-output
-:   Display the results of the program on a screen or store them in a
-    file or perhaps write them to a device like a speaker to play music
-    or speak text.
+çıkış (output)
+:   Programın sonuçlarını ekranda göstermek, bir dosyaya kaydetmek ya da
+    müzik çalmak veya metni seslendirmek için hoparlör gibi bir cihaza
+    göndermek.
 
-sequential execution
-:   Perform statements one after another in the order they are
-    encountered in the script.
+sıralı yürütme (sequential execution)
+:   Deyimleri, betikte karşılaşıldıkları sırayla birbiri ardına
+    gerçekleştirmek.
 
-conditional execution
-:   Check for certain conditions and then execute or skip a sequence of
-    statements.
+koşullu yürütme (conditional execution)
+:   Belirli koşulları kontrol etmek ve buna göre bir deyimler dizisini
+    yürütmek ya da atlamak.
 
-repeated execution
-:   Perform some set of statements repeatedly, usually with some
-    variation.
+tekrarlı yürütme (repeated execution)
+:   Bir grup deyimi, genellikle her seferinde biraz değiştirerek, tekrar
+    tekrar gerçekleştirmek.
 
-reuse
-:   Write a set of instructions once and give them a name and then reuse
-    those instructions as needed throughout your program.
+yeniden kullanım (reuse)
+:   Bir grup talimatı bir kez yazıp onlara bir ad vermek, sonra bu
+    talimatları programınızın her yerinde gerektikçe yeniden kullanmak.
 
-It sounds almost too simple to be true, and of course it is never so
-simple. It is like saying that walking is simply "putting one foot in
-front of the other". The "art" of writing a program is composing and
-weaving these basic elements together many times over to produce
-something that is useful to its users.
+Kulağa neredeyse gerçek olamayacak kadar basit geliyor; elbette hiçbir
+zaman bu kadar basit değildir. Bu, yürümenin basitçe "bir ayağı diğerinin
+önüne koymak" olduğunu söylemeye benzer. Program yazma "sanatı", bu
+temel öğeleri defalarca bir araya getirip birbirine örerek kullanıcılar
+için işe yarar bir şey ortaya çıkarmaktır.
 
-The word counting program above directly uses all of these patterns
-except for one.
+Yukarıdaki kelime sayma programı, bu kalıplardan biri hariç hepsini
+doğrudan kullanıyor.
 
-What could possibly go wrong?
------------------------------
+Ne ters gidebilir ki?
+---------------------
 
-As we saw in our earliest conversations with Python, we must communicate
-very precisely when we write Python code. The smallest deviation or
-mistake will cause Python to give up looking at your program.
+Python'la yaptığımız ilk sohbetlerde gördüğümüz gibi, Python kodu
+yazarken çok kesin bir dille iletişim kurmamız gerekir. En küçük bir
+sapma ya da hata, Python'un programınıza bakmaktan vazgeçmesine yol
+açar.
 
-Beginning programmers often take the fact that Python leaves no room for
-errors as evidence that Python is mean, hateful, and cruel. While Python
-seems to like everyone else, Python knows them personally and holds a
-grudge against them. Because of this grudge, Python takes our perfectly
-written programs and rejects them as "unfit" just to torment us.
+Programlamaya yeni başlayanlar, Python'un hataya hiç yer bırakmamasını
+çoğu zaman Python'un huysuz, nefret dolu ve zalim olduğunun kanıtı
+olarak görürler. Onlara göre Python başka herkesi seviyor gibi
+görünür, ama onları şahsen tanır ve onlara kin besler. Bu kin yüzünden
+de sırf bize eziyet etmek için kusursuz yazılmış programlarımızı alıp
+"uygun değil" diyerek reddeder.
 
 ~~~~ {.python}
 >>> primt 'Hello world!'
@@ -682,291 +703,302 @@ SyntaxError: invalid syntax
 >>>
 ~~~~
 
-There is little to be gained by arguing with Python. It is just a tool.
-It has no emotions and it is happy and ready to serve you whenever you
-need it. Its error messages sound harsh, but they are just Python's call
-for help. It has looked at what you typed, and it simply cannot
-understand what you have entered.
+Python'la tartışmanın pek bir faydası yok. O yalnızca bir araç.
+Duyguları yoktur; ne zaman ihtiyaç duyarsanız size hizmet etmeye mutlu
+ve hazırdır. Hata mesajları sert gelebilir, ama bunlar aslında
+Python'un yardım çağrısıdır. Yazdığınıza bakmıştır ve girdiğiniz şeyi
+bir türlü anlayamamaktadır.
 
-Python is much more like a dog, loving you unconditionally, having a few
-key words that it understands, looking at you with a sweet look on its face
-(`>>>`), and waiting for you to say something it
-understands. When Python says "SyntaxError: invalid syntax", it is
-simply wagging its tail and saying, "You seemed to say something but I
-just don't understand what you meant, but please keep talking to me
-(`>>>`)."
+Python daha çok bir köpeğe benzer: Sizi koşulsuz sever, anladığı birkaç
+anahtar kelimesi vardır, yüzünde tatlı bir ifadeyle size bakar
+(`>>>`) ve anlayacağı bir şey söylemenizi bekler. Python "SyntaxError:
+invalid syntax" dediğinde, aslında yalnızca kuyruğunu sallayıp şöyle
+diyordur: "Bir şey söylediniz gibi geldi ama ne demek istediğinizi hiç
+anlamadım; yine de lütfen benimle konuşmaya devam edin (`>>>`)."
 
-As your programs become increasingly sophisticated, you will encounter
-three general types of errors:
+Programlarınız giderek daha gelişmiş hâle geldikçe, üç genel hata
+türüyle karşılaşacaksınız:
 
-Syntax errors
-:   These are the first errors you will make and the easiest to fix. A
-    syntax error means that you have violated the "grammar" rules of
-    Python. Python does its best to point right at the line and
-    character where it noticed it was confused. The only tricky bit of
-    syntax errors is that sometimes the mistake that needs fixing is
-    actually earlier in the program than where Python
-    *noticed* it was confused. So the line and character
-    that Python indicates in a syntax error may just be a starting point
-    for your investigation.
+Sözdizimi hataları (syntax errors)
+:   Bunlar yapacağınız ilk hatalardır ve düzeltmesi en kolay olanlardır.
+    Sözdizimi hatası, Python'un "dilbilgisi" kurallarını çiğnediğiniz
+    anlamına gelir. Python, kafasının karıştığını fark ettiği satırı ve
+    karakteri tam olarak göstermek için elinden geleni yapar. Sözdizimi
+    hatalarının tek aldatıcı yanı, düzeltilmesi gereken hatanın bazen
+    aslında programda Python'un kafasının karıştığını *fark ettiği*
+    yerden daha önce olmasıdır. Yani Python'un bir sözdizimi hatasında
+    gösterdiği satır ve karakter, araştırmanız için yalnızca bir
+    başlangıç noktası olabilir.
 
-Logic errors
-:   A logic error is when your program has good syntax but there is a
-    mistake in the order of the statements or perhaps a mistake in how
-    the statements relate to one another. A good example of a logic
-    error might be, "take a drink from your water bottle, put it in your
-    backpack, walk to the library, and then put the top back on the
-    bottle."
+Mantık hataları (logic errors)
+:   Mantık hatası, programınızın sözdizimi doğru olduğu hâlde deyimlerin
+    sırasında ya da belki deyimlerin birbiriyle ilişkisinde bir yanlışlık
+    olmasıdır. Mantık hatasına güzel bir örnek şu olabilir: "Su
+    şişenizden bir yudum için, şişeyi sırt çantanıza koyun, kütüphaneye
+    yürüyün, sonra da şişenin kapağını kapatın."
 
-Semantic errors
-:   A semantic error is when your description of the steps to take is
-    syntactically perfect and in the right order, but there is simply a
-    mistake in the program. The program is perfectly correct but it does
-    not do what you *intended* for it to do. A simple
-    example would be if you were giving a person directions to a
-    restaurant and said, "...when you reach the intersection with the
-    gas station, turn left and go one mile and the restaurant is a red
-    building on your left." Your friend is very late and calls you to
-    tell you that they are on a farm and walking around behind a barn,
-    with no sign of a restaurant. Then you say "did you turn left or
-    right at the gas station?" and they say, "I followed your directions
-    perfectly, I have them written down, it says turn left and go one
-    mile at the gas station." Then you say, "I am very sorry, because
-    while my instructions were syntactically correct, they sadly
-    contained a small but undetected semantic error.".
+Anlam hataları (semantic errors)
+:   Anlam hatası, atılacak adımları tarif edişinizin sözdizimi açısından
+    kusursuz ve doğru sırada olduğu, ama programda yine de bir yanlışlık
+    bulunduğu durumdur. Program tamamen doğrudur, ama sizin *amaçladığınız*
+    şeyi yapmaz. Basit bir örnek vermek gerekirse, birine bir restoranın
+    yolunu tarif ederken şöyle dediğinizi düşünün: "...benzin istasyonunun
+    olduğu kavşağa gelince sola dön, bir buçuk kilometre git, restoran
+    solunda kırmızı bir bina." Arkadaşınız çok gecikir ve sizi arayıp bir
+    çiftlikte, bir ahırın arkasında dolaştığını, ortada restorandan eser
+    olmadığını söyler. Siz "benzin istasyonunda sola mı döndün, sağa mı?"
+    diye sorarsınız, o da şöyle der: "Tarifine harfiyen uydum, not
+    almıştım; benzin istasyonunda sola dön ve bir buçuk kilometre git
+    yazıyor." Siz de şöyle dersiniz: "Çok özür dilerim; çünkü
+    talimatlarım sözdizimi açısından doğru olsa da, ne yazık ki küçük
+    ama fark edilmemiş bir anlam hatası içeriyordu."
 
-Again in all three types of errors, Python is merely trying its hardest
-to do exactly what you have asked.
+Tekrar edelim: Bu üç hata türünün hepsinde de Python, sizin tam olarak
+istediğiniz şeyi yapmak için elinden gelenin en iyisini yapmaya
+çalışıyordur.
 
-Debugging
----------
+<!-- TR-EK-BASLA -->
+(Ç.N.: Yukarıdaki kod bloğunda Python'a kızan kullanıcının söylediği "I
+hate you Python!" ve "if you come out of there, I would teach you a
+lesson" satırları da kodun kendisi değiştirilmediği için İngilizce
+kalmıştır. Türkçe karşılıkları: "Senden nefret ediyorum Python!" ve
+"Oradan bir çıksan sana bir ders veririm".)
+<!-- TR-EK-BITIS -->
 
-\index{debugging}
+Hata Ayıklama
+-------------
 
-When Python spits out an error or even when it gives you a result that is different from what you had intended, then begins the hunt for the cause of the error. Debugging is the process of finding the cause of the error in your code. When you are debugging a program, and especially if you are working on a hard bug, there are four things to try:
+\index{hata ayıklama}
 
-reading
-:   Examine your code, read it back to yourself, and check that it says
-    what you meant to say.
+Python bir hata verdiğinde, hatta sizin amaçladığınızdan farklı bir
+sonuç ürettiğinde, hatanın nedenini bulmak için av başlar. Hata ayıklama
+(debugging), kodunuzdaki hatanın nedenini bulma sürecidir. Bir programda
+hata ayıklarken, özellikle de zorlu bir hata (bug) üzerinde
+çalışıyorsanız, deneyebileceğiniz dört şey vardır:
 
-running
-:   Experiment by making changes and running different versions. Often
-    if you display the right thing at the right place in the program,
-    the problem becomes obvious, but sometimes you have to spend some
-    time to build scaffolding.
+okumak (reading)
+:   Kodunuzu inceleyin, kendinize yeniden okuyun ve söylemek istediğiniz
+    şeyi söyleyip söylemediğini kontrol edin.
 
-ruminating
-:   Take some time to think! What kind of error is it: syntax, runtime,
-    semantic? What information can you get from the error messages, or
-    from the output of the program? What kind of error could cause the
-    problem you're seeing? What did you change last, before the problem
-    appeared?
+çalıştırmak (running)
+:   Değişiklikler yapıp farklı sürümleri çalıştırarak deneyin. Çoğu
+    zaman programda doğru yerde doğru şeyi ekrana yazdırırsanız sorun
+    kendini belli eder; ama bazen yardımcı bir iskele (scaffolding)
+    kurmak için biraz zaman harcamanız gerekir.
 
-retreating
-:   At some point, the best thing to do is back off, undoing recent
-    changes, until you get back to a program that works and that you
-    understand. Then you can start rebuilding.
+kafa yormak (ruminating)
+:   Düşünmeye zaman ayırın! Bu ne tür bir hata: sözdizimi mi, çalışma
+    zamanı mı, anlam mı? Hata mesajlarından ya da programın çıktısından
+    hangi bilgileri elde edebilirsiniz? Gördüğünüz soruna ne tür bir hata
+    yol açmış olabilir? Sorun ortaya çıkmadan önce en son neyi
+    değiştirdiniz?
 
-Beginning programmers sometimes get stuck on one of these activities and
-forget the others.  Finding a hard bug requires reading, running, ruminating, and sometimes retreating. If you get stuck on one of these activities, try the others. Each activity comes with its own failure mode.
+geri çekilmek (retreating)
+:   Bir noktada yapılacak en iyi şey geri adım atmaktır: Çalışan ve
+    anladığınız bir programa dönene kadar son değişiklikleri geri alın.
+    Sonra yeniden inşa etmeye başlayabilirsiniz.
 
-\index{typographical error}
+Programlamaya yeni başlayanlar bazen bu etkinliklerden birine takılıp
+kalır ve diğerlerini unuturlar. Zorlu bir hatayı bulmak için okumak,
+çalıştırmak, kafa yormak ve bazen de geri çekilmek gerekir. Bu
+etkinliklerden birinde takılıp kalırsanız, diğerlerini deneyin. Her
+etkinliğin kendine özgü bir tuzağı vardır.
 
-For example, reading your code might help if the problem is a
-typographical error, but not if the problem is a conceptual
-misunderstanding. If you don't understand what your program does, you
-can read it 100 times and never see the error, because the error is in
-your head.
+\index{yazım hatası}
 
-\index{experimental debugging}
+Örneğin kodunuzu okumak, sorun bir yazım hatasıysa işe yarayabilir, ama
+sorun kavramsal bir yanlış anlamaysa işe yaramaz. Programınızın ne
+yaptığını anlamıyorsanız, onu 100 kez okuyup hatayı yine de hiç
+göremeyebilirsiniz, çünkü hata sizin kafanızdadır.
 
-Running experiments can help, especially if you run small, simple tests.
-But if you run experiments without thinking or reading your code, you
-might fall into a pattern I call "random walk programming", which is the
-process of making random changes until the program does the right thing.
-Needless to say, random walk programming can take a long time.
+\index{deneysel hata ayıklama}
 
-\index{random walk programming}
-\index{development plan!random walk programming}
+Deney yapmak, özellikle küçük ve basit testler çalıştırırsanız, işe
+yarayabilir. Ama düşünmeden ya da kodunuzu okumadan deney yaparsanız,
+"rastgele yürüyüş programlama" dediğim bir kalıba düşebilirsiniz; bu,
+program doğru şeyi yapana kadar rastgele değişiklikler yapma sürecidir.
+Söylemeye gerek yok, rastgele yürüyüş programlama çok uzun sürebilir.
 
-You have to take time to think. Debugging is like an experimental
-science. You should have at least one hypothesis about what the problem
-is. If there are two or more possibilities, try to think of a test that
-would eliminate one of them.
+\index{rastgele yürüyüş programlama}
+\index{geliştirme planı!rastgele yürüyüş programlama}
 
-Taking a break helps with the thinking. So does talking. If you explain
-the problem to someone else (or even to yourself), you will sometimes
-find the answer before you finish asking the question.
+Düşünmeye zaman ayırmalısınız. Hata ayıklama deneysel bir bilim gibidir.
+Sorunun ne olduğuna dair en az bir hipoteziniz olmalı. İki ya da daha
+fazla olasılık varsa, bunlardan birini eleyecek bir test düşünmeye
+çalışın.
 
-But even the best debugging techniques will fail if there are too many
-errors, or if the code you are trying to fix is too big and complicated.
-Sometimes the best option is to retreat, simplifying the program until
-you get to something that works and that you understand.
+Ara vermek düşünmeye yardımcı olur. Konuşmak da öyle. Sorunu başka
+birine (hatta kendinize) anlatırsanız, bazen daha soruyu sormayı
+bitirmeden yanıtı bulursunuz.
 
-Beginning programmers are often reluctant to retreat because they can't
-stand to delete a line of code (even if it's wrong). If it makes you
-feel better, copy your program into another file before you start
-stripping it down. Then you can paste the pieces back in a little bit at
-a time.
+Ama hata sayısı çok fazlaysa ya da düzeltmeye çalıştığınız kod çok büyük
+ve karmaşıksa, en iyi hata ayıklama teknikleri bile işe yaramaz. Bazen
+en iyi seçenek geri çekilmek, yani programı çalışan ve anladığınız bir
+şeye ulaşana kadar sadeleştirmektir.
 
-The learning journey
---------------------
+Programlamaya yeni başlayanlar çoğu zaman geri çekilmekte isteksizdir,
+çünkü (yanlış olsa bile) bir kod satırını silmeye kıyamazlar. Kendinizi
+daha iyi hissettirecekse, programı budamaya başlamadan önce başka bir
+dosyaya kopyalayın. Sonra parçaları azar azar geri yapıştırabilirsiniz.
 
-As you progress through the rest of the book, don't be afraid if the
-concepts don't seem to fit together well the first time. When you were
-learning to speak, it was not a problem for your first few years that
-you just made cute gurgling noises. And it was OK if it took six months
-for you to move from simple vocabulary to simple sentences and took 5-6
-more years to move from sentences to paragraphs, and a few more years to
-be able to write an interesting complete short story on your own.
+Öğrenme yolculuğu
+-----------------
 
-We want you to learn Python much more rapidly, so we teach it all at the
-same time over the next few chapters. But it is like learning a new
-language that takes time to absorb and understand before it feels
-natural. That leads to some confusion as we visit and revisit topics to
-try to get you to see the big picture while we are defining the tiny
-fragments that make up that big picture. While the book is written
-linearly, and if you are taking a course it will progress in a linear
-fashion, don't hesitate to be very nonlinear in how you approach the
-material. Look forwards and backwards and read with a light touch. By
-skimming more advanced material without fully understanding the details,
-you can get a better understanding of the "why?" of programming. By
-reviewing previous material and even redoing earlier exercises, you will
-realize that you actually learned a lot of material even if the material
-you are currently staring at seems a bit impenetrable.
+Kitabın geri kalanında ilerlerken, kavramlar ilk seferde birbirine pek
+oturmuyor gibi görünürse korkmayın. Konuşmayı öğrenirken ilk birkaç yıl
+yalnızca sevimli agu sesleri çıkarmanız bir sorun değildi. Basit
+kelimelerden basit cümlelere geçmeniz altı ay, cümlelerden paragraflara
+geçmeniz 5-6 yıl daha, kendi başınıza ilginç ve eksiksiz bir kısa
+öykü yazabilmeniz de birkaç yıl daha sürdüyse, bunda da bir sakınca
+yoktu.
 
-Usually when you are learning your first programming language, there are
-a few wonderful "Ah Hah!" moments where you can look up from pounding
-away at some rock with a hammer and chisel and step away and see that
-you are indeed building a beautiful sculpture.
+Python'ı çok daha hızlı öğrenmenizi istiyoruz; bu yüzden sonraki birkaç
+bölümde her şeyi aynı anda öğretiyoruz. Ama bu, doğal gelmeye başlamadan
+önce sindirilip anlaşılması zaman alan yeni bir dil öğrenmeye benzer.
+Büyük resmi oluşturan küçük parçaları tanımlarken bir yandan da size o
+büyük resmi göstermeye çalıştığımız için konulara tekrar tekrar
+döneceğiz; bu da biraz kafa karışıklığına yol açabilir. Kitap doğrusal
+bir sırayla yazılmış olsa da ve bir ders alıyorsanız ders de doğrusal
+ilerleyecek olsa da, konuları ele alış biçiminizde hiç de doğrusal
+olmamaktan çekinmeyin. İleriye ve geriye bakın, üzerinde fazla
+durmadan okuyun. Daha ileri konulara, ayrıntıları tam olarak anlamadan
+göz gezdirerek programlamanın "neden?"ini daha iyi kavrayabilirsiniz.
+Önceki konuları gözden geçirerek, hatta önceki alıştırmaları yeniden
+yaparak, şu anda başında durduğunuz konu biraz içinden çıkılmaz görünse
+bile aslında çok şey öğrendiğinizi fark edeceksiniz.
 
-If something seems particularly hard, there is usually no value in
-staying up all night and staring at it. Take a break, take a nap, have a
-snack, explain what you are having a problem with to someone (or perhaps
-your dog), and then come back to it with fresh eyes. I assure you that
-once you learn the programming concepts in the book you will look back
-and see that it was all really easy and elegant and it simply took you a
-bit of time to absorb it.
+İlk programlama dilinizi öğrenirken genellikle birkaç harika "Aha!" anı
+yaşarsınız: Bir kayayı çekiç ve keskiyle yontmaya dalmışken başınızı
+kaldırır, bir adım geri çekilir ve gerçekten de güzel bir heykel
+yapmakta olduğunuzu görürsünüz.
 
-Glossary
+Bir şey özellikle zor geliyorsa, bütün gece uyumayıp ona bakmanın
+genellikle bir faydası yoktur. Ara verin, biraz kestirin, bir şeyler
+atıştırın, sorun yaşadığınız şeyi birine (ya da belki köpeğinize)
+anlatın ve sonra konuya taze bir gözle geri dönün. Sizi temin ederim ki
+kitaptaki programlama kavramlarını öğrendiğinizde geriye dönüp
+baktığınızda hepsinin aslında gerçekten kolay ve zarif olduğunu, yalnızca
+sindirmenizin biraz zaman aldığını göreceksiniz.
+
+Sözlükçe
 --------
 
-bug
-:   An error in a program.
-\index{bug}
+ana bellek (main memory)
+:   Programları ve verileri saklar. Ana bellek, elektrik kesildiğinde
+    içindeki bilgileri kaybeder.
+\index{ana bellek}
 
-central processing unit
-:   The heart of any computer. It is what runs the software that we
-    write; also called "CPU" or "the processor".
-\index{central processing unit}
+anlam hatası (semantic error)
+:   Bir programın, programcının amaçladığından farklı bir şey yapmasına
+    yol açan hata.
+\index{anlam hatası}
+
+anlambilim (semantics)
+:   Bir programın anlamı.
+\index{anlambilim}
+
+ayrıştırmak (parse)
+:   Bir programı incelemek ve sözdizimsel yapısını çözümlemek.
+\index{ayrıştırmak}
+
+derlemek (compile)
+:   Yüksek seviyeli bir dilde yazılmış bir programı, daha sonra
+    yürütülmek üzere tek seferde düşük seviyeli bir dile çevirmek.
+\index{derlemek}
+
+düşük seviyeli dil (low-level language)
+:   Bir bilgisayarın kolayca yürütebileceği şekilde tasarlanmış bir
+    programlama dili; "makine kodu" ya da "assembly dili" (assembly
+    language) olarak da adlandırılır.
+\index{düşük seviyeli dil}
+
+etkileşimli mod (interactive mode)
+:   Python yorumlayıcısını, istemde komutlar ve ifadeler (expressions)
+    yazarak kullanma yolu.
+\index{etkileşimli mod}
+
+hata (bug)
+:   Bir programdaki yanlışlık.
+\index{hata}
+
+ikincil bellek (secondary memory)
+:   Programları ve verileri saklar; elektrik kesildiğinde bile
+    bilgileri korur. Genellikle ana bellekten daha yavaştır. Disk
+    sürücüleri ve USB belleklerdeki flaş bellek, ikincil bellek
+    örnekleri arasındadır.
+\index{ikincil bellek}
+
+istem (prompt)
+:   Bir programın bir mesaj gösterip kullanıcının programa bir giriş
+    yazmasını beklediği durum.
+\index{istem}
+
+kaynak kod (source code)
+:   Yüksek seviyeli bir dilde yazılmış program.
+\index{kaynak kod}
+
+makine kodu (machine code)
+:   Yazılım için en düşük seviyeli dil; merkezi işlem biriminin (CPU)
+    doğrudan yürüttüğü dildir.
+\index{makine kodu}
+
+merkezi işlem birimi (central processing unit)
+:   Her bilgisayarın kalbi. Yazdığımız yazılımı çalıştıran birimdir;
+    "CPU" ya da "işlemci" (processor) olarak da adlandırılır.
+\index{merkezi işlem birimi}
 \index{CPU}
 
-compile
-:   To translate a program written in a high-level language into a
-    low-level language all at once, in preparation for later execution.
-\index{compile}
+print fonksiyonu (print function)
+:   Python yorumlayıcısının ekranda bir değer göstermesini sağlayan
+    talimat.
+\index{print fonksiyonu}
+\index{fonksiyon!print}
 
-high-level language
-:   A programming language like Python that is designed to be easy for
-    humans to read and write.
-\index{high-level language}
-
-interactive mode
-:   A way of using the Python interpreter by typing commands and
-    expressions at the prompt.
-\index{interactive mode}
-
-interpret
-:   To execute a program in a high-level language by translating it one
-    line at a time.
-\index{interpret}
-
-low-level language
-:   A programming language that is designed to be easy for a computer to
-    execute; also called "machine code" or "assembly language".
-\index{low-level language}
-
-machine code
-:   The lowest-level language for software, which is the language that
-    is directly executed by the central processing unit (CPU).
-\index{machine code}
-
-main memory
-:   Stores programs and data. Main memory loses its information when the
-    power is turned off.
-\index{main memory}
-
-parse
-:   To examine a program and analyze the syntactic structure.
-\index{parse}
-
-portability
-:   A property of a program that can run on more than one kind of
-    computer.
-\index{portability}
-
-print function
-:   An instruction that causes the Python interpreter to display a value
-    on the screen.
-\index{print function}
-\index{function!print}
-
-problem solving
-:   The process of formulating a problem, finding a solution, and
-    expressing the solution.
-\index{problem solving}
+problem çözme (problem solving)
+:   Bir problemi formüle etme, bir çözüm bulma ve çözümü ifade etme
+    süreci.
+\index{problem çözme}
 
 program
-:   A set of instructions that specifies a computation.
+:   Bir hesaplamayı (computation) tanımlayan talimatlar kümesi.
 \index{program}
 
-prompt
-:   When a program displays a message and pauses for the user to type
-    some input to the program.
-\index{prompt}
+taşınabilirlik (portability)
+:   Bir programın birden fazla bilgisayar türünde çalışabilme özelliği.
+\index{taşınabilirlik}
 
-secondary memory
-:   Stores programs and data and retains its information even when the
-    power is turned off. Generally slower than main memory. Examples of
-    secondary memory include disk drives and flash memory in USB sticks.
-\index{secondary memory}
+yorumlamak (interpret)
+:   Yüksek seviyeli bir dildeki bir programı satır satır çevirerek
+    yürütmek.
+\index{yorumlamak}
 
-semantics
-:   The meaning of a program.
-\index{semantics}
+yüksek seviyeli dil (high-level language)
+:   Python gibi, insanların kolayca okuyup yazabileceği şekilde
+    tasarlanmış bir programlama dili.
+\index{yüksek seviyeli dil}
 
-semantic error
-:   An error in a program that makes it do something other than what the
-    programmer intended.
-\index{semantic error}
+Alıştırmalar
+------------
 
-source code
-:   A program in a high-level language.
-\index{source code}
+**Alıştırma 1:** Bir bilgisayarda ikincil belleğin işlevi nedir?
 
-Exercises
----------
+a\) Programın bütün hesaplama ve mantık işlemlerini yürütmek\
+b) İnternet üzerinden web sayfalarını getirmek\
+c) Bilgiyi uzun süreli, elektrik kesilip yeniden gelse bile saklamak\
+d) Kullanıcıdan giriş almak
 
-**Exercise 1:** What is the function of the secondary memory in a computer?
+**Alıştırma 2:** Program nedir?
 
-a\) Execute all of the computation and logic of the program\
-b) Retrieve web pages over the Internet\
-c) Store information for the long term, even beyond a power cycle\
-d) Take input from the user
+**Alıştırma 3:** Derleyici ile yorumlayıcı arasındaki fark nedir?
 
-**Exercise 2:** What is a program?
+**Alıştırma 4:** Aşağıdakilerden hangisi "makine kodu" içerir?
 
-**Exercise 3:** What is the difference between a compiler and an
-interpreter?
+a\) Python yorumlayıcısı\
+b) Klavye\
+c) Python kaynak dosyası\
+d) Bir kelime işlemci belgesi
 
-**Exercise 4:** Which of the following contains "machine code"?
-
-a\) The Python interpreter\
-b) The keyboard\
-c) Python source file\
-d) A word processing document
-
-**Exercise 5:** What is wrong with the following code:
+**Alıştırma 5:** Aşağıdaki kodda yanlış olan nedir?
 
 ~~~~ {.python}
 >>> primt 'Hello world!'
@@ -977,20 +1009,20 @@ SyntaxError: invalid syntax
 >>>
 ~~~~
 
-**Exercise 6:** Where in the computer is a variable such as "x" stored after
-the following Python line finishes?
+**Alıştırma 6:** Aşağıdaki Python satırının yürütülmesi bittikten sonra
+"x" gibi bir değişken bilgisayarın neresinde saklanır?
 
 ~~~~ {.python}
 x = 123
 ~~~~
 
-a\) Central processing unit\
-b) Main Memory\
-c) Secondary Memory\
-d) Input Devices\
-e) Output Devices
+a\) Merkezi işlem birimi\
+b) Ana bellek\
+c) İkincil bellek\
+d) Giriş birimleri\
+e) Çıkış birimleri
 
-**Exercise 7:** What will the following program print out:
+**Alıştırma 7:** Aşağıdaki program ekrana ne yazdırır?
 
 ~~~~ {.python}
 x = 43
@@ -1001,10 +1033,10 @@ print(x)
 a\) 43\
 b) 42\
 c) x - 1\
-d) Error because x = x - 1 is not possible mathematically
+d) Hata verir, çünkü x = x - 1 matematiksel olarak mümkün değildir
 
-**Exercise 8:** Explain each of the following using an example of a human
-capability: (1) Central processing unit, (2) Main Memory, (3) Secondary
-Memory, (4) Input Device, and (5) Output Device. For example, "What is
-the human equivalent to a Central Processing Unit"?
+**Alıştırma 8:** Aşağıdakilerin her birini bir insan yeteneğinden örnek
+vererek açıklayın: (1) Merkezi işlem birimi, (2) Ana bellek, (3) İkincil
+bellek, (4) Giriş birimi ve (5) Çıkış birimi. Örneğin, "Merkezi işlem
+biriminin insandaki karşılığı nedir?"
 

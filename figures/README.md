@@ -14,3 +14,16 @@ To make PNGs from EPS
 Sadly, OmniGraffle's Export to PNG leaves an asymetric black border
 and makes things look bad.
 
+Turkish translation
+-------------------
+
+In this fork the figures in ../images are translated to Turkish, but the
+.graffle files here are still the English originals (OmniGraffle is not
+available to the translators). The Turkish SVG, EPS and PNG files are
+generated from the English SVGs by ../tr/figures.py using the strings in
+../tr/figures.json:
+
+    python tr/figures.py arch pda --out images
+
+Edit tr/figures.json and rerun the script instead of editing the images
+by hand.
