@@ -4,7 +4,7 @@
 
 Sütunlar: İngilizce | Türkçe | İlk kullanım (bölüm) | Not
 
-## Başlangıç listesi (CLAUDE.md)
+## Başlangıç listesi
 
 | English | Türkçe | İlk kullanım | Not |
 |---|---|---|---|
