@@ -137,7 +137,7 @@ Sütunlar: İngilizce | Türkçe | İlk kullanım (bölüm) | Not
 | syntactic structure | sözdizimsel yapı | 01 | |
 | Python for Everybody (kitap adı) | Herkes İçin Python | kapak | Kitap sahibi kararı, 2026-09-25. |
 | Exploring Data Using Python 3 (alt başlık) | Python 3 ile Veri Keşfi | kapak | Kitap sahibi kararı, 2026-09-25. |
-| Turkish Edition | Türkçe Baskı | kapak | Başlık sayfasında çevirenin adının üstünde (Almanca baskıdaki "Deutsche Ausgabe" gibi). |
+| Turkish translation (title page) | Türkçe Çeviri | kapak | Başlık sayfasında çevirenin adının üstünde (kitap sahibi kararı, 2026-10-20; önceki "Türkçe Baskı" yerine). |
 | translator | çeviren / çevirmen | önsöz | Başlık sayfasında "Dr. Altay Arbak" (kitap sahibi kararı; AA/AB künye metni ayrı karar). |
 | Preface to the Turkish Edition | Türkçe Baskıya Önsöz | A0 | `A0-preface.mkd` içinde TR-EK-BASLA/TR-EK-BITIS bloğu. |
 

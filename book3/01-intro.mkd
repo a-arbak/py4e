@@ -1,6 +1,6 @@
 % Herkes İçin Python
 % Python 3 ile Veri Keşfi
-% Dr. Charles R. Severance \nl[2em] Türkçe Baskı \nl Dr. Altay Arbak
+% Dr. Charles R. Severance \nl[2em] Türkçe Çeviri \nl Dr. Altay Arbak
 
 Neden program yazmayı öğrenmelisiniz?
 =====================================
